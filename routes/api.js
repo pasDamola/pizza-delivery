@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/users');
 
+// Get one user by id
+router.get('/users/:id', function (req, res, next) {
+    User.findOne({ _id: req.params.id }).then(function (user) {
+        res.send(user);
+    })
+});
+
 // Get all the users from the database
 router.get('/users', function (req, res, next) {
     User.find({}).then(function (users) {
