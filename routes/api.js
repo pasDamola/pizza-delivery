@@ -8,7 +8,7 @@ router.get('/users', function (req, res) {
 
 // Add new users to the database
 router.post('/users', function (req, res) {
-    res.send('Hello World');gti
+    res.send('Hello World');
 });
 
 // Update a user in the database

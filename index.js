@@ -1,9 +1,16 @@
 // Dependencies
 const express = require('express');
 const routes = require('./routes/api');
+const bodyParser = require('body-parser');
 
 // Set up express app
 const app = express();
+
+
+// body parser middleware
+app.use(bodyParser.json());
+
+
 
 // initialize all the routes 
 app.use('/api', routes);
